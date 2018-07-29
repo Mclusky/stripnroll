@@ -1,0 +1,168 @@
+.gallery
+  background-color: #121014
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%23333036' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")
+  padding: 2px 0
+  border-bottom: 1px solid $footer-main-yellow
+  margin-bottom: 37.5rem
+
+  @media screen and (min-width: 640px)
+    margin-bottom: 25.8125rem
+
+.gallery-heading
+  margin: 5rem auto
+  width: 100%
+  text-align: center
+  font-family: $headings-font
+
+.heading-figs
+  color: #000
+  display: inline-flex
+  flex-flow: row
+  align-items: center
+  justify-content: center
+  width: 2.5em
+  height: 2.5em
+  border-radius: 50%
+  border: 1px solid $footer-email
+  background: lighten($footer-main-yellow, 10%)
+  opacity: 0
+
+  &:not(first-child)
+    margin-left: -0.5em
+
+  @media screen and (min-width: 768px)
+    width: 3.125em
+    height: 3.125em
+
+.anim-letters
+  @for $i from 1 through 7
+    &:nth-child(#{$i})
+      animation:
+        name: heading
+        duration: 300ms * $i
+        timing-function: ease-in-out
+        fill-mode: forwards
+
+.letter
+  text-transform: lowercase
+  font-size: 2em
+
+  @media screen and (min-width: 768px)
+    font-size: 2.5em
+
+// ****************HEADING ANIMATION***************** //
+@keyframes heading
+  0%
+    opacity: 0
+    transform: translateY(-100px)
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+.gallery-container
+  width: 80%
+  max-width: 1200px !important
+  margin: 2.5em auto
+
+// **************** FLICKITY SET UP*********************//
+.carousel-cell
+  width: 100%
+  min-height: 12.5em
+  overflow: hidden
+  text-align: center
+
+  @media screen and (min-width: 600px) and (max-width: 1200px)
+    width: 50%
+
+  @media screen and (min-width: 1201px)
+    width: 33.33%
+
+.flickity-viewport
+  max-width: 100%
+
+.gallery-pic
+  width: 100%
+
+.carousel-cell img
+  max-width: 100%
+  height: auto
+  border: 2px solid $main-font-color
+
+.flickity-prev-next-button
+  background: rgba($header-nav-item, 0.3) !important
+  position: absolute
+  border: 1px solid $almost-black
+
+//*******Making image bigger*******//
+.lgImg
+  @media screen and (min-width: 768px)
+    width: 100% !important
+    z-index: 100
+
+  // Switch View Button //
+
+.toggle
+  position: relative
+  height: 100px
+  width: 80%
+  display: flex
+  flex-flow: row wrap
+  margin: 2.5em auto
+  justify-content: space-around
+  align-items: center
+
+.switch
+  width: 120px
+  display: inline-block
+  text-align: center
+  border-radius: 10px
+  transition: box-shadow 0.1s ease-in-out
+
+.toggle-size
+  @media screen and (max-width: 767px)
+    display: none
+
+.switch span
+  width: 100%
+
+  +button-anchor
+
+// ****************Photo Credits************ //
+.pic-contact
+  width: 80%
+  margin: 2.5em auto
+
+  & p
+    padding: 0.625em 0
+    color: $header-nav-item
+
+    & a
+      padding: 0 0.625em
+
+  & a
+    color: $main-font-color
+
+  @media screen and (min-width: 1280px)
+    text-align: center
+
+.photo-credit
+  @media screen and (min-width: 1280px)
+    display: inline-block
+
+    &:first-of-type
+      margin-right: 1.25em
+
+.btop
+  display: flex
+  flex-flow: column
+  justify-content: center
+  align-items: center
+  max-width: 80%
+  margin: 1.25rem auto
+
+  & a
+    color: $main-font-color
+
+.top-btn
+  padding: 0.25em 0

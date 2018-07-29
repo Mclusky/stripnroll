@@ -1,0 +1,111 @@
+//*************Nav Icon************//
+=menu-icon($color)
+  position: relative
+  width: 2.5em
+  height: 3px
+  display: block
+  background: $color
+  content: ""
+  transition: all 200ms ease-in-out
+
+//********************************//
+
+//*********Slide dots*************//
+.slide-dots
+  text-align: center
+  transform: translateX(0)
+  transition: all 300ms ease-in-out
+  text-align: center
+  width: 100%
+  margin: 0 auto
+  text-align: center
+
+span.dot
+  border: 1px solid $header-nav-item
+  display: inline-block
+  position: relative
+  bottom: 0
+  width: 0.625em
+  height: 0.625em
+  border-radius: 50%
+
+  &:not(:last-child)
+    margin-right: 0.15em
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape)
+    width: 0.45em
+    height: 0.45em
+
+.active-dot
+  background: $header-nav-item
+  animation: dot 400ms ease-in-out forwards
+
+@keyframes dot
+  0%
+    opacity: 0
+    transform: scale(0.6)
+
+  100%
+    opacity: 1
+    transform: scale(1)
+
+.dots-out
+  opacity: 0
+  transform: translateX(100%)
+
+//*********Anchor Button***********//
+=button-anchor
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  border-radius: 8px
+  box-shadow: 0 8px 0 rgba($almost-black, 0.8), 0 15px 20px rgba($main-font-color, 0.35)
+  color: $header-nav-item
+  background-color: rgba($main-font-color, 0.95)
+  background-image: linear-gradient(hsla(303, 30%, 23%, 0.8), hsla(338, 90%, 70%, 0.2))
+  text-shadow: 0 -1px 1px rgba(175, 49, 95, 0.7)
+  padding: 0.5em 0.85em
+  letter-spacing: 0.08em
+  text-transform: uppercase
+  min-height: 2.5em
+  transition: all 0.2s ease-in-out, transform 0.1s ease-in-out
+
+  &:hover
+    background-color: darken($main-font-color, 10%)
+    color: $title-shadow
+    text-shadow: 0px -1px $btn-hover-shadow
+    cursor: pointer
+
+  &:active
+    box-shadow: 0 2px 0 rgba($almost-black, 0.8), 0 10px 15px rgba($main-font-color, 0.35)
+    transform: translate(0, 5px)
+
+//**************************************//
+// **************FOOTER*****************//
+=email
+  padding: 0.625em
+  background: $footer-email
+  color: #fff
+  text-decoration: none
+  text-transform: uppercase
+  border-radius: 5px
+  border: 2px solid $footer-main-yellow
+  box-shadow: inset 1px 1px 2px #7d7d7d
+  letter-spacing: 0.05em
+  transition: all 0.2s ease-in-out, transform 0.1s ease-in-out
+
+  &:hover
+    background: darken($footer-email, 5%)
+    color: lighten($footer-email-placeholder, 10%)
+
+  &:active
+    box-shadow: 0 2px 0 rgba($header-nav-item, 0.8), 0 10px 15px rgba($header-nav-item, 0.35)
+    transform: translate(0, 5px)
+
+=brush
+  position: absolute
+  display: inline-block
+  width: 6.25rem
+  height: 6.25rem
+  background-repeat: no-repeat
+  background-size: contain

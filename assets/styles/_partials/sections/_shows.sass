@@ -1,0 +1,147 @@
+.shows
+  width: 100%
+  position: relative
+
+.shows-overlay
+  width: 100%
+  position: relative
+  z-index: 5
+  background: rgba($shows-background, 0.9)
+
+.shows-wrap
+  max-width: 80%
+  margin: 0 auto
+  text-align: center
+  position: relative
+  padding: 2px 0
+
+  & .section-heading
+    width: 100%
+
+.shows-background-wrap
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 0
+  top: 0
+
+  +retinize("shows", "shows-large", "jpg")
+
+  background-position: center center
+
+.shows
+  & .guitar-brush
+    display: inline-block
+    min-width: 14em
+    height: 5em
+    margin-top: 2.5em
+    background-image: url("../images/brushes/guitar.png")
+    background-repeat: no-repeat
+
+    @media screen and (min-width: 860px)
+      position: absolute
+      left: 0
+      margin-top: 0
+      margin-right: 1.25em
+
+  & .shows-heading
+    display: inline-block
+    font:
+      size: 1.75em
+      family: $headings-font
+      weight: 400
+    padding: 0.625em
+
+.shows-header-wrap
+  margin-top: 5rem
+  position: relative
+
+  @extend %flex-col-center
+
+  @media screen and (min-width: 860px)
+    margin-top: 6.25rem
+    flex-flow: row wrap
+    justify-content: center
+    align-items: flex-end
+
+.shows-list
+  margin: 1.25em 0
+
+  & li
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid $header-nav-item
+    padding: 1.25em 0
+
+    &:last-child
+      border-bottom: 1px solid $header-nav-item
+
+    @media screen and (min-width: 800px)
+      flex-flow: row
+      justify-content: space-between
+      text-align: left
+
+li.gig-hidden
+  display: none
+
+.gig-anim
+  perspective: 800px
+  animation: gig 300ms ease-in-out forwards
+
+@keyframes gig
+  0%
+    opacity: 0
+    transform: translateX(-100px) scale(0.5)
+
+  100%
+    opacity: 1
+    transform: translateX(0) scale(1)
+
+.l-show
+  flex: 1
+
+  &:nth-child(1n+2)
+    margin-top: 0.625em
+
+.show-venue > a
+  color: $main-font-color
+
+.show-tickets
+  text-decoration: none
+
+  +button-anchor
+
+  &:active
+    transform: translate(0, 5px)
+
+  padding: 0.3em 0.5em
+  max-height: 25px
+  max-width: 9.375em
+
+.more-shows
+  margin: 1.25em auto
+  max-width: 7.1875em
+  cursor: pointer
+
+  & > *
+    padding: 0.625em
+
+.sml-header
+  padding: 0.625em 0
+  margin-bottom: 0.625em
+
+.shows-trackers
+  margin: 2.5em 0
+
+.tracker-icon
+  max-width: 3.125em
+  max-height: 3.125em
+  display: inline-block
+
+  &:nth-of-type(1)
+    margin-right: 1.25em
+
+.bandsintown
+  max-width: 100%

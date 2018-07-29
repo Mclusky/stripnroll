@@ -1,0 +1,92 @@
+.about
+  overflow-x: hidden
+  background: white
+
+.about-sec-wrap
+  background: white
+  max-width: 80%
+  margin: 0 auto
+
+  @extend %about-flex
+
+  & p
+    @media screen and (min-width: 768px)
+      font-size: 100%
+      letter-spacing: 0.1em
+      line-height: 1.25em
+
+.member
+  @extend %about-member
+
+  &:nth-child(1n+2)
+    margin-top: 1.875em
+
+    @media screen and (min-width: 520px)
+      margin-top: 0
+
+  & p
+    text-align: left
+    text-indent: 1.25em
+    padding: 0.625em
+    margin: 1.25em auto
+    hyphens: auto
+    border-bottom: 1px solid $footer-email-placeholder
+
+    &::first-letter
+      font-size: 2em
+
+.member picture
+  width: 100%
+  display: block
+  text-align: center
+
+  & img
+    width: 100%
+    box-shadow: 3px 1px 5px black
+
+.img-wrap
+  position: relative
+
+.member-shadow
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 100%
+  right: 0
+  overflow: hidden
+  background: rgba($almost-black, 0.8)
+  width: 100%
+  height: 0
+  opacity: 0
+  box-shadow: 3px 1px 5px black
+  transition: 400ms ease-in-out
+
+  & > *
+    padding: 0.625em
+
+.shadow-text-wrap
+  position: absolute
+  width: 100%
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  color: $header-nav-item
+  font-size: 1.25em
+  letter-spacing: 0.2em
+  line-height: 1.2em
+  text-align: center
+
+.img-wrap
+  opacity: 0
+  transform: scale(0)
+  transition: all 200ms ease-in-out
+
+  &:hover .member-shadow
+    opacity: 1
+    height: 100%
+    bottom: 0
+
+//***********Animating the images in**********//
+.active
+  transform: scale(1)
+  opacity: 1

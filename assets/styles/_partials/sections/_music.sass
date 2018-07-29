@@ -1,0 +1,197 @@
+.music-sec-wrap
+  padding-top: 1px
+  letter-spacing: 0.1em
+  max-width: 100%
+  margin: 0 auto
+  background: linear-gradient(to bottom right, white, #e1c7bb)
+  display: flex
+  flex-flow: column
+
+.album-wrapper
+  display: flex
+  flex-flow: column
+  width: 90%
+  margin: 2.5em auto 0
+
+  @media screen and (min-width: 360px)
+    width: 80%
+
+  @media screen and (min-width: 1200px)
+    flex-flow: row
+    align-items: flex-start
+
+.album-details
+  flex: 1
+  max-width: 100%
+
+  @extend %flex-col-center
+
+  & img
+    max-width: 100%
+
+.album-details
+  & picture
+    max-width: 100%
+    flex: 1
+
+    @media screen and (min-width: 755px) and (max-width: 1199px)
+      max-width: 70%
+
+  @media screen and (min-width: 755px) and (max-width: 1199px)
+    flex-flow: row
+    align-items: flex-start
+
+.album-display
+  max-width: 100%
+  display: flex
+  flex-flow: column
+  align-items: center
+
+  @media screen and (min-width: 755px) and (max-width: 1199px)
+    flex: 1
+
+  @media screen and (min-width: 1200px)
+    max-width: 70%
+
+.album-credits
+  @extend %flex-col-center
+
+  margin-top: 0.25em
+  padding: 0.25em 0
+  justify-content: space-around
+  flex: 1
+
+.music-lp-info
+  padding: 0.15em
+
+  &:first-child
+    font-weight: 700
+
+  @media screen and (min-width: 600px)
+    font-size: 1.2em
+
+a.music-lp-info
+  text-decoration: none
+  text-align: center
+
+a.music-lp-info > span
+  +button-anchor
+
+  &:active
+    transform: translate(0, 5px)
+
+.band-credits
+  margin: 1.25em auto 0
+
+  @media screen and (min-width: 755px) and (max-width: 1199px)
+    flex: 1
+    margin: 0
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-between
+
+  @media screen and (min-width: 1200px)
+    max-width: 80%
+
+  & ul
+    margin-top: 1.25em
+
+  & p
+    padding: 0.25em 0
+
+.member-name
+  font-weight: 700
+
+// *********************** Audio Player ***************//
+.audio-player
+  flex: 1
+  max-width: 100%
+  margin-top: 2.5em
+
+  @extend %flex-col-center
+
+  align-items: flex-start
+
+  @media screen and (min-width: 1200px)
+    margin-top: 0
+
+.fa-volume-up
+  opacity: 0
+
+.fa-play
+  color: $main-font-color
+
+.songs
+  text-align: center
+  width: 100%
+  margin: 0 auto
+
+  & li
+    padding: 1.25em 0.15em
+    border-top: 1px solid $header-nav-item
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+    align-items: center
+
+    &:last-child
+      border-bottom: 1px solid $header-nav-item
+
+    &:hover
+      font-weight: bold
+
+.fa-volume-up
+  color: $header-nav-item
+  position: absolute
+
+// ************* Button Icons Songs List************** //
+button.control
+  width: 3.125em
+  height: 3.125em
+  padding: 0.625em
+  border: 1px solid $main-font-color
+  border-radius: 50%
+  background-color: $main-font-color
+  vertical-align: bottom
+
+  &:hover
+    cursor: pointer
+
+  & .fa-play, .fa-pause, .fa-fast-backward, .fa-fast-forward
+    color: $header-nav-item
+
+.btn-active
+  display: block
+
+.btn-hide
+  display: none
+
+// ************** Discography *******************//
+.album-switch
+  margin: 1.25em auto 2.5em
+
+.preview
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-around
+
+  & li
+    flex: 0 1 30%
+    max-width: 18.75em
+
+    &:hover
+      cursor: pointer
+
+  & img
+    max-width: 100%
+
+.mash-up
+  border: 2px solid black
+
+.hooked-img
+  border: 1px solid black
+
+h3.album-choice
+  font-size: 1.5em
+  margin: 1.25em auto
+  text-align: center

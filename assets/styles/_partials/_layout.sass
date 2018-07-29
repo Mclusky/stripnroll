@@ -1,0 +1,60 @@
+//********FLEX COLUMN CENTER**********//
+%flex-col-center
+  display: flex
+  flex-flow: column wrap
+  justify-content: center
+  align-items: center
+
+//************FLEX ROW***************//
+%flex-row
+  display: flex
+  flex-flow: row
+
+//*************HEADER*************//
+//*******************************//
+//************FIXED MAIN NAV*********//
+
+=full-nav
+  opacity: 1
+  display: block
+  position: absolute
+  top: auto
+  bottom: 0.625em
+  transform: translateX(0)
+
+  .nav-menu
+    flex-flow: row wrap
+    justify-content: space-around
+
+    & .nav-items
+      display: inline-block
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-around
+
+//***************END HEADER***************//
+
+//***************************************//
+//*****************ABOUT*****************//
+//***************************************//
+%about-flex
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+
+  @media screen and (min-width: 600px)
+    justify-content: space-between
+    align-items: flex-start
+
+%about-member
+  flex: 0 1 80%
+
+  @media screen and (min-width: 600px)
+    flex: 0 1 45%
+
+  @media screen and (min-width: 1920px)
+    flex: 0 1 20%
+
+//*******************END ABOUT**************//
+
+//*******************GALLERY*****************//

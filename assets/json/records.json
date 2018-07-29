@@ -1,0 +1,56 @@
+{
+  "records": {
+    "mother": {
+      "title": "Mother Of All Bombs",
+      "year": "2017",
+      "description": {
+        "studio": "Recorded, mixed and mastered by Wayne Adams at Bear Bite Studios May-August 2017.",
+        "credits": "All songs/lyrics by Dominic Smith, music by Strip N Roll."
+      },
+      "personel": {
+        "featuring": "Vocals on 'Under the Water' by <span class='member-name'>Vivian Fabry</span>.",
+        "names": {
+          "Dominic Smith": "Guitar/Vocals",
+          "Huw Evans": "Lead Guitar",
+          "Felipe Goncalves": "Bass",
+          "Nick Simms": "Drums, Percussion, Backing Vocals"
+        }
+      },
+      "trackListing": ["Pins N Needles", "Sucking On The Cherry", "Hide Your Face", "Under The Water", "Time Will Come", "Ride", "Take It Away", "Shake Down", "Layers", "Just Another Day"]
+    },
+    "hooked": {
+      "title": "Hooked",
+      "year": "2015",
+      "description": {
+        "studio": "Recorded, mixed and mastered by Wayne Adams at Bear Bite Studios summer 2015.",
+        "credits": "All songs/lyrics by Dominic Smith, music by Strip N Roll."
+      },
+      "trackListing": ["Hooked", "Three Monkeys", "Secrets Of Happiness", "Loner", "The King Is Dead", "Getting Better", "Some Days", "Things Are Gonna Happen", "Sliding Joe", "That Girl"],
+      "personel": {
+        "names": {
+          "Dominic Smith": "Guitar/Vocals/Percussion",
+          "Valentino Forgione": "Lead Guitar",
+          "Pasquale Savignano": "Bass",
+          "Adrian Raimsagainst": "Drums"
+        }
+      }
+    },
+    "mashup": {
+      "title": "Mash Up",
+      "year": "2014",
+      "description": {
+        "studio": "Recorded, mixed and mastered by Wayne Adams at Bear Bite Studios in 2014.",
+        "credits": "All songs/lyrics by Dominic Smith, music by Strip N Roll."
+      },
+      "trackListing": ["Corpses", "Sinking Fast", "Mash Up", "New York City", "Politics And Politicians", "Dark Side", "Train Rolling", "Pop Ass", "Rollercoaster", "Hey You"],
+      "personel": {
+        "names": {
+          "Dominic Smith": "Guitar/Vocals",
+          "Valentino Forgione": "Lead Guitar/Vocals",
+          "Pasquale Savignano": "Bass",
+          "Oliver Hurtu": "Drums/Percussion"
+        }
+      }
+    }
+  }
+}

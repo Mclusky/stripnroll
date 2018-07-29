@@ -1,0 +1,51 @@
+//**************FONT*****************//
+$main-font: "Frank Ruhl Libre", serif
+$title-font: "Asset", cursive
+$headings-font: "Roboto Mono", monospace
+
+//***************COLORS*************//
+$main-font-color: #4b2849
+$nav-color: darken($main-font-color, 8%)
+$header-title: #cf6503
+$title-shadow: #04707F
+$header-lp: #fff0ea
+$btn-hover-shadow: #4b3c70
+$almost-black: #121014
+$header-nav-text-hover: $title-shadow
+$header-nav-item: #fff0ea
+$about-hover: $header-nav-item
+$music-gradient: #e4ccc1
+$music-track-hover: #dec9c0
+$shows-background: #abc6a1
+$shows-lines: #c4dabc
+$footer-main-yellow: #edbc00
+$footer-email: #bd9500
+$footer-email-placeholder: #acacac
+
+//************************************//
+
+html, body
+  font:
+    size: 16px
+    family: $main-font
+  line-height: 1.2em
+  color: $main-font-color
+
+  @media screen and (min-width: 1440px)
+    font-size: 18px
+
+  @media screen and (min-width: 1920px)
+    font-size: 20px
+
+.section-heading
+  width: 80%
+  font:
+    size: 2em
+    family: $headings-font
+    weight: 400
+  padding: 0.625em 0
+  text-align: center
+  text-shadow: 2px 2px 3px $main-font-color
+  border-top: 1px solid $almost-black
+  border-bottom: 1px solid $almost-black
+  margin: 5rem auto 1.25em auto

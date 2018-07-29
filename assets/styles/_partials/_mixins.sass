@@ -1,0 +1,30 @@
+=header-nav-anchor
+  font:
+    family: $headings-font
+    weight: 200
+  text-decoration: none
+  color: $header-nav-item
+
+  &:hover
+    color: $header-nav-text-hover
+
+=text-shadow
+  letter-spacing: 0.1em
+  text-shadow: $title-shadow 2px 2px 2px, $title-shadow 2px 2px 2px, $title-shadow 2px 2px 2px, $title-shadow 2px 2px 2px
+
+//************Media Queries for Images************//
+=retinize($folder, $file, $type)
+  background-image: url("../images/" + $folder + "/" + $file + "." + $type)
+  background-size: cover
+  background-repeat: no-repeat
+
+  @media screen and (min-resolution: 1.5dppx)
+    background-image: url("../images/" + $folder + "/" + $file + "-x2." + $type)
+
+//*******************Mobile header slider***************//
+=mobile-slide
+  text-decoration: none
+  color: $title-shadow
+  text-transform: uppercase
+  letter-spacing: 0.15em
+  margin-left: 0.625em
